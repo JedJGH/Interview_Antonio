@@ -34,7 +34,7 @@
         <entry file="file://$PROJECT_DIR$/06 git.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="-44" />
+              <first_editor relative-caret-position="-264" />
               <second_editor />
             </state>
           </provider>
@@ -107,12 +107,12 @@
       <option name="presentableId" value="Default" />
       <updated>1555893483008</updated>
       <workItem from="1555893484385" duration="634000" />
-      <workItem from="1555927131774" duration="248000" />
+      <workItem from="1555927131774" duration="500000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="882000" />
+    <option name="totallyTimeSpent" value="1134000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
@@ -163,7 +163,7 @@
     <entry file="file://$PROJECT_DIR$/06 git.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="-44" />
+          <first_editor relative-caret-position="-264" />
           <second_editor />
         </state>
       </provider>
