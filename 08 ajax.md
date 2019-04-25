@@ -1,6 +1,7 @@
 ## Ajax
 ### 1.Ajax
 #### 1).ajax请求和原理
+    ```javascript
     var xhr = new XMLHTTPRequest();
     // 请求 method 和 URI
     xhr.open('GET', url);
@@ -13,6 +14,7 @@
     xhr.readyState
     // 响应内容
     xhr.responseText
+    ```
 #### 2).AJAX的工作原理
     Ajax的工作原理相当于在用户和服务器之间加了—个中间层(AJAX引擎),使用户操作与服务器响应异步化。　Ajax的原理简单来说通过XmlHttpRequest对象来向服务器发异步请求，从服务器获得数据，然后用javascript来操作DOM而更新页面。
 #### 3).ajax优缺点
