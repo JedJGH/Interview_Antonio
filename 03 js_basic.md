@@ -1,45 +1,22 @@
 ## js基础
 ### 1.eval是做什么的？
-    它的功能是把对应的字符串解析成JS代码并运行；
+    把对应的字符串解析成JS代码并运行；
     应该避免使用eval，不安全，非常耗性能（2次，一次解析成js语句，一次执行）。
     由JSON字符串转换为JSON对象的时候可以用eval，var obj =eval('('+ str +')');
 ### 2.什么是window对象? 什么是document对象?
     window对象是指浏览器打开的窗口。
     document对象是Documentd对象（HTML 文档对象）的一个只读引用，window对象的一个属性。
 ### 3.null，undefined 的区别？
-    null      表示一个对象是“没有值”的值，也就是值为“空”；
-    undefined     表示一个变量声明了没有初始化(赋值)；
-    undefined不是一个有效的JSON，而null是；
-    undefined的类型(typeof)是undefined；
-    null的类型(typeof)是object；
-    
-    Javascript将未赋值的变量默认值设为undefined；
-    Javascript从来不会将变量设为null。它是用来让程序员表明某个用var声明的变量时没有值的。
-    typeof undefined
-    //"undefined"
-    undefined :是一个表示"无"的原始值或者说表示"缺少值"，就是此处应该有一个值，但是还没有定义。当尝试读取时会返回 undefined；
-    例如变量被声明了，但没有赋值时，就等于undefined
-    typeof null
-    //"object"
-    null : 是一个对象(空对象, 没有任何属性和方法)；
-    例如作为函数的参数，表示该函数的参数不是对象；
-    
-    注意：
-    在验证null时，一定要使用　=== ，因为 == 无法分别 null 和　undefined
-    null == undefined // true
-    null === undefined // false
-    再来一个例子：
-    null
-    Q：有张三这个人么？
-    A：有！
-    Q：张三有房子么？
-    A：没有！
-    
-    undefined
-    Q：有张三这个人么？
-    A：有！
-    Q: 张三有多少岁？
-    A: 不知道（没有被告诉）
+|   null   |  undefined    |
+| ---- | ---- |
+|    表示一个对象是“没有值”的值，也就是值为“空”；  |   表示一个变量声明了没有初始化(赋值)；   |
+|   null是   |    不是一个有效的JSON  |
+|   (typeof)是object   |  类型(typeof)是undefined    |
+|   Javascript从来不会将变量设为null。它是用来让程序员表明某个用var声明的变量时没有值的。   |   Javascript将未赋值的变量默认值设为undefined   |
+|   typeof null //"object"   |   是一个表示"无"的原始值或者说表示"缺少值"，就是此处应该有一个值，但是还没有定义。当尝试读取时会返回 undefined 例如变量被声明了，但没有赋值时，就等于undefined  |
+|   null : 是一个对象(空对象, 没有任何属性和方法)； 例如作为函数的参数，表示该函数的参数不是对象；   |   在验证null时，一定要使用　=== ，因为 == 无法分别 null 和　undefined; null == undefined // true; null === undefined // false   |
+|   null Q：有张三这个人么？ A：有！ Q：张三有房子么？ A：没有！    |  undefined Q：有张三这个人么？ A：有！ Q: 张三有多少岁？ A: 不知道（没有被告诉）    |
+
 ### 4.["1", "2", "3"].map(parseInt) 答案是多少？
 ```javascript
  parseInt() 函数能解析一个字符串，并返回一个整数，需要两个参数 (val, radix)，

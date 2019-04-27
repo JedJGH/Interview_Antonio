@@ -1,5 +1,5 @@
 ## HTML
-### 1. H5新特性有哪些？
+### 1.H5新特性有哪些？
     * 语义化标签header,nav,footer,aside,article,section
     * 音频、视频API(audio,video)
     * 画布(Canvas) API
@@ -8,22 +8,23 @@
     * webworker, websocket
     * web worker是运行在浏览器后台的js程序，他不影响主程序的运行，是另开的一个js线程，可以用这个线程执行复杂的数据操作，然后把操作结果通过postMessage传递给主线程，这样在进行复杂且耗时的操作时就不会阻塞主线程了。
 ### 2.两种实现前端路由的方式
-#### 第一种：HTML5 History两个新增的API:
- <code>history.pushState</code> 和<code>history.replaceState</code>，可以操作浏览器的历史记录，而不会引起页面的刷新。
-#### 第二种：History interface提供的两个新方法
-<code>.pushState(stateObject, title, URL)</code>
-<code>.replaceState(stateObject, title, URL)</code>
- 可以对浏览器历史记录栈进行修改
-#### 前端路由的优点:
-```
-1.比如页面持久性，像大部分音乐网站，你都可以在播放歌曲的同时，跳转到别的页面而音乐没有中断，再比如前后端彻底分离。
-2.开发一个前端路由，主要考虑到页面的可插拔、页面的生命周期、内存管理等。
-3.从性能和用户体验的层面来比较的话，后端路由每次访问一个新页面的时候都要向服务器发送请求，然后服务器再响应请求，这个过程肯定会有延迟。而前端路由在访问一个新页面的时候仅仅是变换了一下路径而已，没有了网络延迟，对于用户体验来说会有相当大的提升。
-```
-#### 前端路由的缺点:
-```
-使用浏览器的前进，后退键的时候会重新发送请求，没有合理地利用缓存。
-```
+    ① <code>history.pushState</code> 
+      
+    ② <code>history.replaceState</code>
+      
+    DOM window 对象通过 history 对象提供了对浏览器的会话历史的访问，
+    允许你在用户浏览历史中向前和向后跳转，同时——从HTML5开始——提供了对history栈中内容的操作
+    window.history.back(); //在history中向后跳转(如同用户点击了后退 ← 按钮)
+    window.history.forward(); //在history中向前跳转(如同用户点击了前进 → 按钮)
+    window.history.go(N);跳转到 history 中指定的一个点
+      window.history.go(-1) -- 向后移动一个页面 (等同于调用 back())
+      window.history.go(1) -- 向前移动一个页面, 等同于调用了 forward():
+### 前端路由的优、缺点:
+    优点：
+      * 比如页面持久性，像大部分音乐网站，你都可以在播放歌曲的同时，跳转到别的页面而音乐没有中断，再比如前后端彻底分离。
+      * 开发一个前端路由，主要考虑到页面的可插拔、页面的生命周期、内存管理等。
+      * 从性能和用户体验的层面来比较的话，后端路由每次访问一个新页面的时候都要向服务器发送请求，然后服务器再响应请求，这个过程肯定会有延迟。而前端路由在访问一个新页面的时候仅仅是变换了一下路径而已，没有了网络延迟，对于用户体验来说会有相当大的提升。
+    缺点：使用浏览器的前进，后退键的时候会重新发送请求，没有合理地利用缓存。
 #### 关于Hash：
 在前端路由中，Hash就是url中的#,我们需要一个根据监听哈希变化触发的事件(hashchange) 事件。
 我们用<code>window.location</code>处理哈希的改变时不会重新渲染页面，而是当作新页面加到历史记录中，这样我们跳转页面就可以在hashchange事件中注册 ajax从而改变页面内容。可以使用<code>window.addEventListener("hashchange", funcRef, false)</code>对hash的改变添加监听事件：

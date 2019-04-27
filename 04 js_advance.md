@@ -6,18 +6,15 @@
     4. appendChild(newListItem向元素添加新的子节点，作为最后一个子节点 
     5. document.documentElement - 全部文档 document.body - 文档的主体
        http://www.w3school.com.cn/jsref/dom_obj_all.asp
-
 ### 2.JS事件：target与currentTarget区别
     target在事件流的目标阶段；
     currentTarget在事件流的捕获，目标及冒泡阶段。
     只有当事件流处在目标阶段的时候，两个的指向才是一样的， 而当处于捕获和冒泡阶段的时候，target指向被单击的对象而currentTarget指向当前事件活动的对象（一般为父级）。
-
 ### 3.事件模型
     事件捕捉阶段：事件开始由顶层对象触发，然后逐级向下传播，直到目标的元素； 
     处于目标阶段：处在绑定事件的元素上； 
     事件冒泡阶段：事件由具体的元素先接收，然后逐级向上传播，直到不具体的元素；
     阻止 冒泡／捕获 event.stopPropagation()和IE的event.cancelBubble=true
-
 ### 4.DOM事件绑定 
     1.绑定事件监听函数：addEventListener和attchEvent 
     2.在JavaScript代码中绑定：获取DOM元素 dom.onlick = fn 
@@ -27,7 +24,6 @@
     首先发生的事件捕获，为截获事件提供机会。
     然后是实际的目标接受事件。
     最后一个阶段是时间冒泡阶段，可以在这个阶段对事件做出响应。
-
 ### 6.什么是事件委托
     因为事件具有冒泡机制，因此我们可以利用冒泡的原理，把事件加到父级上，触发执行效果。这样做的好处当然就是提高性能了
     最重要的是通过event.target.nodeName判断子元素
